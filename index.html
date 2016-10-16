@@ -17,7 +17,7 @@
 		#box12 {
 			width:100vw;
 			height:250px;
-			background-color:gray;
+			background-color:#1F9;
 		}
 		
 		#box2 {
@@ -115,20 +115,20 @@
 			<img class='thumb3' 
 			src='http://placekitten.com/1200/400' />
 			<div id='ibox1'>
-				<h3 id='name'>Cats live here</h3>
+				<h3 id='name'>Cats live here (don't click me or any of us, but if you do try and fix us)</h3>
 			</div>
 			<img class='thumb1' 
 			src='http://placekitten.com/300/300' />
 		</div>
 		<div id='box12'>
-			<h3 id='name1'>Cat's Name</h3>
+			<h3 id='name1'>Cat's Name (can click)</h3>
 		</div>
 		<div id='box2'>	
-			<h3 id='title1'>cat titles</h3>
-			<h3 id='title2'>cat titles</h3>
-			<h3 id='title3'>cat titles</h3>
-			<h3 id='title4'>cat titles</h3>
-			<h3 id='title5'>cat titles</h3>
+			<h3 id='title1'>cat titles (don't click us)</h3>
+			<h3 id='title2'>cat titles (don't click us)</h3>
+			<h3 id='title3'>cat titles (don't click us)</h3>
+			<h3 id='title4'>cat titles (don't click us)</h3>
+			<h3 id='title5'>cat titles (don't click us)</h3>
 			<img class='thumb5' 
 			src='http://placekitten.com/200/250' />
 			<img class='thumb5' 
@@ -144,7 +144,7 @@
 			<h3 id='name2'>Biography</h3>
 				<p id='biog'>Biography written for someone to read<br/>
 							Biography written for someone to read<br/>
-							Biography written for someone to read<br/>
+							Don't click the cat<br/>
 							Biography written for someone to read<br/>
 							Biography written for someone to read<br/>
 							Biography written for someone to read<br/>
@@ -155,7 +155,69 @@
 		<div id='box4'>
 			<img class='thumb3' 
 			src='http://placekitten.com/1200/550' />
-			<h3 id='name4'>Cat's also live here</h3>
+			<h3 id='name4'>Cat's also live here (don't click the cat)</h3>
 		</div>
+		<script>
+			var myBut = document.getElementById("box1");
+			var disp = document.getElementById("box1");
+			var butWidth = 100;
+			var butHeight = 100;
+			var r = 0;
+			var g = 0;
+			var b = 0;
+			myBut.onclick = function(){
+				r = Math.round(Math.random()*255);
+				g = Math.round(Math.random()*255);
+				b = Math.round(Math.random()*255);
+				disp.style.backgroundColor = "rgb("+r+", "+g+", "+b+")";
+				myBut.style.width = butWidth+"px";
+				myBut.style.height = butHeight+"px";
+				butWidth = butWidth + 10;
+				butHeight = butHeight + 5;
+			}
+			
+			var nmyBut = document.getElementById("box2");
+			var ndisp = document.getElementById("box2");
+			var butWidth = 100;
+			var butHeight = 100;
+			var r = 0;
+			var g = 0;
+			var b = 0;
+			nmyBut.onclick = function(){
+				r = Math.round(Math.random()*255);
+				g = Math.round(Math.random()*255);
+				b = Math.round(Math.random()*255);
+				ndisp.style.backgroundColor = "rgb("+r+", "+g+", "+b+")";
+				nmyBut.style.width = butWidth+"px";
+				nmyBut.style.height = butHeight+"px";
+				butWidth = butWidth + 10;
+				butHeight = butHeight + 5;
+			}
+			
+			var onmyBut = document.getElementById("box4");
+			var butWidth = 100;
+			var butHeight = 100;
+			onmyBut.onclick = function(){
+				onmyBut.style.width = butWidth+"px";
+				onmyBut.style.height = butHeight+"px";
+				butWidth = butWidth + 10;
+				butHeight = butHeight + 5;
+			}
+			
+			var nonmyBut = document.getElementById("box3");
+			var butWidth = 100;
+			var butHeight = 100;
+			nonmyBut.onclick = function(){
+				nonmyBut.style.width = butWidth+"px";
+				nonmyBut.style.height = butHeight+"px";
+				butWidth = butWidth + 10;
+				butHeight = butHeight + 5;
+			}
+			
+			var ononmyBut = document.getElementById("name1");
+			ononmyBut.onclick = function(){
+				ononmyBut = document.getElementById("name1").innerHTML = "My name is prince Pawsalot";
+			}
+		</script>
 	</body>
 </html>
